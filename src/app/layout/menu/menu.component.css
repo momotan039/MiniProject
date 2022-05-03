@@ -1,0 +1,17 @@
+:host{
+  border: solid;
+  background: var(--main-background);
+}
+
+nav .navbar-nav{
+  flex-direction: column !important;
+}
+
+nav .navbar-nav span{
+ transition: all 0.5s;
+}
+nav .navbar-nav span:hover{
+  background: var(--main-background);
+  border-radius: 15px;
+  font-size: x-large;
+}

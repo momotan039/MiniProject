@@ -1,0 +1,14 @@
+<h1 class="title">Add Video Game</h1>
+
+<form>
+    <input  placeholder="Title" name="title" #title="ngModel" [(ngModel)]="videoGame!.Title" type="text">
+    <input  placeholder="BackGround" name="backGround" #backGround="ngModel" [(ngModel)]="videoGame!.BackGround" type="text">
+    <input  placeholder="Year" name="year" #year="ngModel" [(ngModel)]="videoGame!.Year" type="number">
+    <input  placeholder="Price" name="price" #price="ngModel" [(ngModel)]="videoGame!.price" type="number">
+    <select [(ngModel)]="videoGame!.type" name="typeGame">
+      <option value="PS1">PS1</option>
+      <option value="PS2">PS2</option>
+      <option value="PS3">PS3</option>
+    </select>
+    <button type="submit" (click)="AddGame()">Add Game</button>
+  </form>

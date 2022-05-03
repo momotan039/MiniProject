@@ -1,0 +1,10 @@
+main{
+  padding-top: 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+main div{
+  height: 100%;
+  z-index: 0;
+}

@@ -1,0 +1,18 @@
+<h1 class="text-center">Cart</h1>
+
+<div class="All_Games row justify-content-center">
+
+  <div *ngFor="let item of listVideoGame" class="game m-1 mb-5">
+    <a class="url" routerLink="/GameDetails/{{item.Title}}"></a>
+  <h3 class="title">{{item.Title}}</h3>
+  <span class="year">{{item.Year}}</span>
+  <div class="poster" style="background:url('{{item.BackGround}}')"></div>
+  <h3 class="price text-center">Price:{{item.price}} ₪</h3>
+<a routerLink="/Cart" (click)="removeGame(item)"><i class="deleteIcon fa fa-remove"></i></a>
+</div>
+</div>
+<h1 *ngIf="!totalPrice" class="text-center specialTitle">Cart List Empty!!</h1>
+  <h1 *ngIf="totalPrice" class="text-center specialTitle">Total Price:{{totalPrice}} ₪</h1>
+  <h1 *ngIf="totalPrice" class="text-center checkOut">CheckOut <i class="fa fa-credit-card-alt" ></i></h1>
+
+  <h1 *ngIf="totalPrice" (click)="clearCart()" class="text-center emptyCart">Empty Cart <i class="fa fa-trash-o"></i></h1>

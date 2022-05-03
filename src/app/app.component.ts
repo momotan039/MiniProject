@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HomePage } from './data/PagesData';
+import { Page } from './model/Page';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MiniProject';
+  // public Home:Page=HomePage;
+  // //undefined|string=HomePage.Title
+  //   GetTitleHome:string=this.Home.Title!;
+
 }
+
+
+

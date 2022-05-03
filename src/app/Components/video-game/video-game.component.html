@@ -1,0 +1,6 @@
+<div *ngFor="let item of listVideoGame" class="game m-1">
+  <a class="url" routerLink="/GameDetails/{{item.Title}}"></a>
+<h3 class="title">{{item.Title}}</h3>
+<span class="year">{{item.Year}}</span>
+<div class="poster" style="background:url('{{item.BackGround}}')"></div>
+</div>

@@ -1,0 +1,30 @@
+
+
+.title{
+  text-align: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form input,form select{
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 16px;
+  --bs-bg-opacity: 1;
+  font-size: 25px;
+  background-color: rgba(var(--bs-warning-rgb),var(--bs-bg-opacity))!important;
+}
+form select{
+  padding: 10px 6rem;
+}
+
+form button{
+  background: var(--bs-blue);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 25px;
+  color: white;
+}
+

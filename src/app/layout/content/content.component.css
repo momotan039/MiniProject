@@ -1,0 +1,13 @@
+:host{
+  border: solid;
+  background: var(--main-background);
+  z-index: -2;
+  padding-bottom: 50px;
+}
+
+
+.title{
+  /* color: var(--Basic-Color);
+  text-align: center; */
+  color: red;
+}

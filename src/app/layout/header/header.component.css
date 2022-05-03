@@ -1,0 +1,28 @@
+header{
+  position: fixed;
+  height: 55px;
+  border: solid;
+  width: 100%;
+  background: var(--main-background);
+  z-index: 1;
+}
+
+
+header .Title a{
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+
+
+header .leftSide i{
+font-size: 3rem;
+padding: 0 15px;
+cursor: pointer;
+transition: all .3s;
+color: black;
+}
+header .leftSide i:hover{
+color: var(--main-color);
+transform: rotate(1turn);
+}

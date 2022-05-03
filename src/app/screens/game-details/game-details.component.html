@@ -1,0 +1,12 @@
+<div class="d-flex h-100 text-center">
+  <div class="left w-50 d-flex flex-column justify-content-center">
+    <h1><i class="fa fa-gamepad" aria-hidden="true"></i> {{videoGame?.Title}}</h1>
+    <h1><i class="fa fa-calendar-o" aria-hidden="true"></i> {{videoGame?.Year}}</h1>
+    <h1><i class="fa fa-ils" aria-hidden="true"></i> {{videoGame?.price}}</h1>
+    <h1><i class="fa fa-th-list" aria-hidden="true"></i> {{videoGame?.type}}</h1>
+    <h1 (click)="addToCart()" class="buy"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy</h1>
+  </div>
+  <div class="right w-50">
+    <div class="poster" style="background: url({{videoGame?.BackGround}});"></div>
+  </div>
+</div>
