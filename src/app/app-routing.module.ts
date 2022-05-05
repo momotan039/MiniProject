@@ -1,3 +1,4 @@
+
 import { AddProductComponent } from './screens/add-product/add-product.component';
 import { CartComponent } from './screens/cart/cart.component';
 import { GameDetailsComponent } from './screens/game-details/game-details.component';
@@ -7,6 +8,7 @@ import { HomeComponent } from './screens/home/home.component';
 import { PS3Component } from './screens/ps3/ps3.component';
 import { PS2Component } from './screens/ps2/ps2.component';
 import { PS1Component } from './screens/ps1/ps1.component';
+import { ApiDataComponent } from './screens/apiData/api-data/api-data.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path:"GameDetails/:name",component:GameDetailsComponent},
   {path:"Cart",component:CartComponent},
   {path:"AddVideoGame",component:AddProductComponent},
+  {path:"apiData",component:ApiDataComponent},
+
 
 ];
 

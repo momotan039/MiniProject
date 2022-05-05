@@ -1,6 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,8 @@ import { VideoGameComponent } from './Components/video-game/video-game.component
 import { CartComponent } from './screens/cart/cart.component';
 import { AddProductComponent } from './screens/add-product/add-product.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { ApiDataComponent } from './screens/apiData/api-data/api-data.component';
 
 @NgModule({
   declarations: [
@@ -33,11 +35,13 @@ import { FormsModule } from '@angular/forms';
     VideoGameComponent,
     CartComponent,
     AddProductComponent,
+    ApiDataComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

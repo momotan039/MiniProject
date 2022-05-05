@@ -17,6 +17,7 @@ export class AddProductComponent implements OnInit {
   constructor(private VideoGameService:VideoGameService) { }
 
   ngOnInit(): void {
+
   }
 
   AddGame(){
