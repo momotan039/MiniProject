@@ -4,6 +4,6 @@ export class VideoGame{
  Year?:number
  price?:number
  type?:string
-
+ id?:number
 }
 

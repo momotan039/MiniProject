@@ -1,36 +1,21 @@
 <h3>Test Api</h3>
-<!-- <table>
-  <thead>
-    <th>ID</th>
-    <th>Name</th>
-    <th>phone</th>
-    <th>Mail</th>
-    <th>Website</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of Users">
-      <td>{{user.id}}</td>
-      <td>{{user.name}}</td>
-      <td>{{user.phone}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.website}}</td>
-    </tr>
-  </tbody>
-</table> -->
-
 <table>
   <thead>
     <th>ID</th>
     <th>Name</th>
-    <th>capacity</th>
-    <th>usage</th>
+    <th>Type</th>
+    <th>Price</th>
+    <th>Year</th>
+    <th>BackGround</th>
   </thead>
   <tbody>
-    <tr *ngFor="let hotel of Hotels">
-      <td>{{hotel.hotelID}}</td>
-      <td>{{hotel.hotelName}}</td>
-      <td>{{hotel.capacity}}</td>
-      <td>{{hotel.usage}}</td>
+    <tr *ngFor="let game of VideoGames">
+      <td>{{game.id}}</td>
+      <td>{{game.name}}</td>
+      <td>{{game.type}}</td>
+      <td>{{game.price}}</td>
+      <td>{{game.year}}</td>
+      <td>{{game.backGround}}</td>
     </tr>
   </tbody>
 </table>

@@ -9,14 +9,17 @@ import { HttpServiceService } from 'src/app/services/HttpService/http-service.se
 export class ApiDataComponent implements OnInit {
 
   Users=<any>[]
-  Hotels=<any>[]
+  VideoGames=<any>[]
+
   constructor(private HttpService:HttpServiceService) {
+
      this.HttpService.GetUsers().then(u=>{
       this.Users=u
     })
-     this.HttpService.GetLocalHotels().then(h=>{
-      this.Hotels=h
+    this.HttpService.GetVideoGames().then(g=>{
+      this.VideoGames=g
     })
+
 }
 ngOnInit(): void {
 }
