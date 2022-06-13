@@ -6,4 +6,5 @@ export const items:Array<MenuItem>=[
   {name:"PS2 Games",url:"PS2"},
   {name:"PS3 Games",url:"PS3"},
   {name:"Add VideoGame",url:"AddVideoGame"},
+  {name:"List Video Game",url:"apiData"},
 ]

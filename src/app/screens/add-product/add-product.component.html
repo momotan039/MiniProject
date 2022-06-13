@@ -1,14 +1,14 @@
-<h1 class="title">Add Video Game</h1>
+<h1 class="title">{{this.method}} Video Game</h1>
 
-<form>
-    <input  placeholder="Title" name="title" #title="ngModel" [(ngModel)]="videoGame!.Title" type="text">
-    <input  placeholder="BackGround" name="backGround" #backGround="ngModel" [(ngModel)]="videoGame!.BackGround" type="text">
-    <input  placeholder="Year" name="year" #year="ngModel" [(ngModel)]="videoGame!.Year" type="number">
+<form >
+    <input placeholder="Title" name="title" #title="ngModel" [(ngModel)]="videoGame!.title" type="text">
+    <input  placeholder="BackGround" name="backGround" #backGround="ngModel" [(ngModel)]="videoGame!.backGround" type="text">
+    <input  placeholder="Year" name="year" #year="ngModel" [(ngModel)]="videoGame!.year" type="number">
     <input  placeholder="Price" name="price" #price="ngModel" [(ngModel)]="videoGame!.price" type="number">
-    <select [(ngModel)]="videoGame!.type" name="typeGame">
-      <option value="PS1">PS1</option>
-      <option value="PS2">PS2</option>
-      <option value="PS3">PS3</option>
+    <select [(ngModel)]="videoGame!.type" name="type">
+      <option value="Ps1">Ps1</option>
+      <option value="Ps2">Ps2</option>
+      <option value="Ps3">Ps3</option>
     </select>
-    <button type="submit" (click)="AddGame()">Add Game</button>
+    <button (click)="Operation()" type="submit" >{{this.method}} Game</button>
   </form>

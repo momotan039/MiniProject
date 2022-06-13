@@ -1,21 +1,32 @@
-<h3>Test Api</h3>
-<table>
-  <thead>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Price</th>
-    <th>Year</th>
-    <th>BackGround</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let game of VideoGames">
-      <td>{{game.id}}</td>
-      <td>{{game.name}}</td>
-      <td>{{game.type}}</td>
-      <td>{{game.price}}</td>
-      <td>{{game.year}}</td>
-      <td>{{game.backGround}}</td>
-    </tr>
-  </tbody>
-</table>
+<h3 style="text-align: center;">Games List</h3>
+<div class="d-flex right-left">
+
+  <div class="left p-3">
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Year</th>
+        <th>BackGround</th>
+        <th>operation</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let game of VideoGames">
+          <td >{{game.title}}</td>
+          <td >{{game.type}}</td>
+          <td >{{game.price}}</td>
+          <td >{{game.year}}</td>
+          <td >{{game.backGround}}</td>
+          <td>
+            <button (click)="DeleteGmae(game.id)" class="btn btn-danger me-1"><i class="fa fa-trash m-right-1 "></i></button>
+            <button (click)="FillAddForm(game)" class="btn btn-secondary"><i class="fa fa-edit"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="right">
+    <app-add-product [method]="'Edit'" [videoGame]="this.VideoGame"></app-add-product>
+  </div>
+</div>

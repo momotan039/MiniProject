@@ -3,6 +3,7 @@ import { PS1Page } from 'src/app/data/PagesData';
 import { Ps1GamesData } from 'src/app/data/Ps1GamesData';
 import { Page } from 'src/app/model/Page';
 import { VideoGame } from 'src/app/model/VideoGame';
+import { DataService } from 'src/app/services/DataService/data.service';
 
 @Component({
   selector: 'app-ps1',
@@ -12,10 +13,12 @@ import { VideoGame } from 'src/app/model/VideoGame';
 export class PS1Component implements OnInit {
 
   PageDetails:Page=PS1Page
-  PageContents=Ps1GamesData
-  constructor() { }
+  PageContents:any
+  constructor() {
+  }
   @Input()PageContent?:Array<VideoGame>;
   ngOnInit(): void {
+    debugger;
+  this.PageContents=DataService.Ps1Games
   }
-
 }

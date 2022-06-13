@@ -16,7 +16,7 @@ import { GameDetailsComponent } from './screens/game-details/game-details.compon
 import { VideoGameComponent } from './Components/video-game/video-game.component';
 import { CartComponent } from './screens/cart/cart.component';
 import { AddProductComponent } from './screens/add-product/add-product.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ApiDataComponent } from './screens/apiData/api-data/api-data.component';
 
@@ -42,6 +42,7 @@ import { ApiDataComponent } from './screens/apiData/api-data/api-data.component'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

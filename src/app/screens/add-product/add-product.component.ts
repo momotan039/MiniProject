@@ -1,8 +1,10 @@
-import { allGames } from './../../data/Constance';
-import { VideoGameService } from './../../services/VideoGame/video-game.service';
 import { CartService } from './../../services/Cart/cart.service';
 import { VideoGame } from './../../model/VideoGame';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { HttpService } from 'src/app/services/HttpService/http.service';
+import { DataService } from 'src/app/services/DataService/data.service';
+
 
 @Component({
   selector: 'app-add-product',
@@ -10,20 +12,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-  videoGame:VideoGame={
-    Title:"",
-    BackGround:"",
-  };
-  constructor(private VideoGameService:VideoGameService) { }
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+  });
 
+  @Input() videoGame:VideoGame={
+    title:"",
+    backGround:"",
+  };
+  constructor(
+    private HttpServiceService:HttpService) {
+
+     }
+     @Input() method="Add"
   ngOnInit(): void {
 
   }
 
-  AddGame(){
-    if(this.videoGame.Title==""||
-    this.videoGame.BackGround==""||
-    this.videoGame.Year==undefined||
+  Operation(){
+    if(this.videoGame.title==""||
+    this.videoGame.backGround==""||
+    this.videoGame.year==undefined||
     this.videoGame.price==undefined
     )
     {
@@ -35,9 +45,16 @@ export class AddProductComponent implements OnInit {
       alert("Please select type of Game!!")
       return
     }
-    allGames.splice(0,0,this.videoGame)
-    alert("New Game Saved Successfully")
-    this.videoGame=new VideoGame();
+
+    if(this.method!="Edit")
+    this.HttpServiceService.PostGame(this.videoGame).then(f=>{
+      alert("New Game Saved Successfully")
+    })
+    else
+      this.HttpServiceService.EditGame(this.videoGame).then(e=>{
+        alert("Edit Game Saved Successfully")
+      })
   }
+
 
 }

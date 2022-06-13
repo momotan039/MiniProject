@@ -6,6 +6,11 @@
     "MiniProject": {
       "projectType": "application",
       "schematics": {
+
+        "component":{
+          "spec":false
+        },
+
         "@schematics/angular:application": {
           "strict": true
         }

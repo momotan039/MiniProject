@@ -33,4 +33,12 @@ export class CartComponent implements OnInit {
       this.totalPrice+=item.price!;
     })
   }
+  OnInit():void{
+    console.log("OnInit")
+  }
+
+  ngAfterViewInit(): void {
+    console.log("ngAfterViewInit")
+  }
+
 }

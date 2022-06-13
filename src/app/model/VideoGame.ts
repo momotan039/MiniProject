@@ -1,7 +1,7 @@
 export class VideoGame{
-  Title?:string
- BackGround?:string
- Year?:number
+  title?:string
+ backGround?:string
+ year?:number
  price?:number
  type?:string
  id?:number
